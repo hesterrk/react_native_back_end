@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
+const bodyParser = require("body-parser");
 require("dotenv/config");
 
 // Mongoose
@@ -48,13 +49,14 @@ process.on("SIGINT", () => {
 
 // Declare routes here
 
-const postsRouter = require("./postsRouter");
+const postsRouter = require("./Posts/postsRouter");
 
 const server = express();
 
 server.use(helmet());
 server.use(cors());
 server.use(express.json());
+server.use(bodyParser.json());
 
 // Use routes
 server.use("/api/posts", postsRouter);
