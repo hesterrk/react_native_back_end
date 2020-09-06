@@ -6,7 +6,7 @@ const helmet = require("helmet");
 
 const mongoose = require("mongoose");
 
-// database im connecting to
+// DB im connecting to
 
 const url = "mongodb://127.0.0.1:27017/reactnativeinsta";
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
