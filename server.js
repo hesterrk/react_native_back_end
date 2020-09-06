@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
+require("dotenv/config");
 
 // Mongoose
 
@@ -8,7 +9,7 @@ const mongoose = require("mongoose");
 
 // DB im connecting to
 
-const url = "mongodb://127.0.0.1:27017/reactnativeinsta";
+const url = process.env.DB_CONNECTION;
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Check if connection works or not
