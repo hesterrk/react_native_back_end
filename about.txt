@@ -3,3 +3,5 @@
 
 -Schema based solution to model our app's data 
 -Creates an object reference when we interact with our mongoDB database
+-It also allows us to connect to our database (our database being mongoDB)
+-mongoDB talks to mongoose => mongoose talks to express + node
