@@ -64,6 +64,12 @@ server.get("/", (req, res) => {
 });
 
 // Custom middleware
+
+server.use((req, res) => {
+  res.status(404).json({
+    message: "Your request is not found",
+  });
+});
 server.use((err, req, res, next) => {
   res.status(500).json({
     message: "Something went wrong",
