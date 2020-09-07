@@ -12,6 +12,7 @@ router.get("/", async (req, res, next) => {
 });
 
 router.post("/", async (req, res, next) => {
+  //Creating an instance of the posts model
   const newPost = new Post({
     caption: req.body.caption,
   });
