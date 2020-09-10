@@ -48,6 +48,7 @@ process.on("SIGINT", () => {
 // Declare routes here
 
 const postsRouter = require("./Posts/postsRouter");
+const usersRouter = require("./users/usersRouter")
 
 const server = express();
 
@@ -58,6 +59,7 @@ server.use(bodyParser.json());
 
 // Use routes
 server.use("/api/posts", postsRouter);
+server.use("/api/users", usersRouter)
 
 server.get("/", (req, res) => {
   res.status(200).json({ message: "all working" });
