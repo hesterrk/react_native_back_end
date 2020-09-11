@@ -12,16 +12,17 @@ var authSchema = new Schema({
   },
   last_name: {
     type: String,
-    required: true,
+    required: [true, 'Must Enter Last Name'],
   },
   email: {
     type: String,
-    required: true,
+    required: [true, 'Must Enter Email'],
   },
 
   password: {
-    String,
+    type:String,
     required: true,
+    minlength: [5, 'Password mininum character length has to be greater than 5']
   },
 });
 
